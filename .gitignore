@@ -1,0 +1,9 @@
+# Default ignored files
+/.idea/*
+/sub-project-client/target/*
+/sub-project-server/target/*
+/sub-project-client/logs/*
+/sub-project-server/logs/*
+agv.iml
+agv.ipr
+agv.iws

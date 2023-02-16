@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true" scan="true"> <!-- setting debug="true" inspects the internal state of the logback.xml | scan="true" allows library to reload config file when they're modified -->
+    <property name="LOG_PATH" value="./logs"/>
+    <property name="LOG_ARCHIVE" value="${LOG_PATH}/archived_logs"/>
+    <timestamp key="timestamp-by-second" datePattern="yyyyMMdd'T'HHmmss"/>
+
+    <appender name="Console-Appender"
+              class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%msg%n</pattern>
+        </encoder>
+    </appender>
+
+<!-- todo: add File Appenders and Rollbar appender for when application grows -->
+
+    <root level="DEBUG">
+        <appender-ref ref="Console-Appender" />
+    </root>
+
+</configuration>
